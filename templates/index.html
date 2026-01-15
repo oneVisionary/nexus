@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawSight – AI Vision for Dogs</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .navbar {
+            background: #0f172a;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+            color: white;
+        }
+
+        .tech-badge {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(6px);
+        }
+
+        .feature-card, .step-card, .tech-card {
+            border-radius: 16px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover, .step-card:hover, .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            background: #0f172a;
+            color: white;
+        }
+
+        .footer a {
+            color: #cbd5f5;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">🐶 PawSight</a>
+        <a href="/dashboard" class="btn btn-outline-light">Try Demo</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h1 class="display-5 fw-bold mb-3">
+                    PawSight – AI Vision for Your Dog 🐶🧠
+                </h1>
+
+                <p class="lead mb-4">
+                    We use computer vision, mathematics and large language models to understand your dog’s posture, emotions and health — just like a real vet.
+                </p>
+
+                <a href="/dashboard" class="btn btn-light btn-lg fw-semibold px-4 me-2">Try Live Demo ⚡</a>
+                <a href="#how" class="btn btn-outline-light btn-lg fw-semibold px-4">How It Works</a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-lg-6 text-center">
+                <img src="{{ url_for('static', filename='thumbnail.png') }}"
+                     alt="AI Dog Analysis"
+                     class="img-fluid rounded-4 shadow-lg"
+                     style="max-height: 420px;">
+            </div>
+        </div>
+
+        <!-- TECH STACK STRIP -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h5 class="fw-semibold mb-3">Powered by Real AI & Engineering ⚙️</h5>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+
+                    <span class="badge tech-badge rounded-pill px-3 py-2 shadow-sm">
+                        🦾 YOLO11n Dog Pose
+                    </span>
+
+                    <span class="badge tech-badge rounded-pill px-3 py-2 shadow-sm">
+                        📐 Mathematical Modeling
+                    </span>
+
+                    <span class="badge tech-badge rounded-pill px-3 py-2 shadow-sm">
+                        🧠 DeepSeek LLM
+                    </span>
+
+                    <span class="badge tech-badge rounded-pill px-3 py-2 shadow-sm">
+                        ☁️ Novita Serverless API
+                    </span>
+
+                    <span class="badge tech-badge rounded-pill px-3 py-2 shadow-sm">
+                        🌐 Tavily Search
+                    </span>
+
+                    <span class="badge tech-badge rounded-pill px-3 py-2 shadow-sm">
+                        🔊 ElevenLabs TTS
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">What PawSight Analyzes</h2>
+        <p class="section-subtitle text-center">Real-time vision + math + AI reasoning</p>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center shadow-sm">
+                    <h3>📹 Video Upload</h3>
+                    <p>Upload your dog’s video for frame-by-frame AI pose analysis.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center shadow-sm">
+                    <h3>🐕 Dog Pose Estimation</h3>
+                    <p>YOLO11n tracks tail, ears, eyes, nose, withers and knees.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center shadow-sm">
+                    <h3>📐 Behavior Mathematics</h3>
+                    <p>Angles, distances & velocity reveal emotion and activity.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center shadow-sm">
+                    <h3>🧠 Emotion Detection</h3>
+                    <p>Posture patterns mapped to stress, happiness & alertness.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center shadow-sm">
+                    <h3>🩺 AI Vet Reasoning</h3>
+                    <p>DeepSeek explains behavior like a real veterinary doctor.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4 h-100 text-center shadow-sm">
+                    <h3>🔊 Voice Diagnosis</h3>
+                    <p>ElevenLabs converts diagnosis into realistic voice.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">How It Works</h2>
+        <p class="section-subtitle text-center">From video to AI vet diagnosis</p>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card step-card p-4 h-100 text-center shadow-sm">
+                    <h3>📤 Upload Video</h3>
+                    <p>User uploads a dog video.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card step-card p-4 h-100 text-center shadow-sm">
+                    <h3>🎯 YOLO Detection</h3>
+                    <p>YOLO11n detects all dog keypoints.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card step-card p-4 h-100 text-center shadow-sm">
+                    <h3>📐 Math Analysis</h3>
+                    <p>Angles & movement calculated.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card step-card p-4 h-100 text-center shadow-sm">
+                    <h3>🧠 Behavior Inference</h3>
+                    <p>Rules + math infer emotions.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card step-card p-4 h-100 text-center shadow-sm">
+                    <h3>🤖 DeepSeek AI</h3>
+                    <p>LLM generates vet-style summary.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card step-card p-4 h-100 text-center shadow-sm">
+                    <h3>🔊 Voice Output</h3>
+                    <p>ElevenLabs speaks the diagnosis.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+    <div class="container text-center">
+        <p class="mb-1 fw-semibold">🐶 PawSight – AI Vision for Dog Health</p>
+        <p class="mb-0">&copy; 2026 PawSight. Built with ❤️, math and AI.</p>
+    </div>
+</footer>
+
+</body>
+</html>
