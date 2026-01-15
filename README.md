@@ -5,14 +5,7 @@ The project demonstrates how computer vision, AI reasoning, and user-centered de
 ### **Problem Statement & Motivation**
 
 Pet owners often misinterpret or overlook subtle behavioral changes in their dogs, which can be early signs of stress, discomfort, or health issues. Traditional monitoring methods rely heavily on human observation, which is subjective and inconsistent. There is a strong need for an intelligent, automated system that can continuously analyze dog behavior and emotions to provide meaningful insights. PawSighnt is motivated by the goal of improving animal welfare, enabling early intervention, and strengthening the bond between pets and their owners through technology.
-![Uploading ChatGPT Image Jan 15, 2026, 06_53_04 PM.png…]()
 
-![Uploading ChatGPT Image Jan 15, 2026, 12_28_42 AM.png…]()
-
-Software Architecture
-![Uploading 12.png…]()
-
-Hardware Architecture
 
 ### **1. Clone the Repository**
 
